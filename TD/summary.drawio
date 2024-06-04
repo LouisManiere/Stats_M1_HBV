@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-04T12:20:50.348Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0" etag="nB2_IR5uEXvmEYTKIiZl" version="24.4.13" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-04T12:21:13.951Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0" etag="yYll7pnmxuRX5JZPwGnB" version="24.4.13" type="github">
   <diagram name="Page-1" id="S4iGcN87YycN1-mO8-58">
     <mxGraphModel dx="1434" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -26,13 +26,25 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="Qmwp_-XaxjS77FFdiGAR-7" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Variable&lt;br&gt;&lt;/h1&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;sketch=1;curveFitting=1;jiggle=2;labelBackgroundColor=none;fontColor=#143642;" vertex="1" parent="1">
-          <mxGeometry x="510" y="20" width="150" height="40" as="geometry" />
+          <mxGeometry x="510" y="20" width="100" height="40" as="geometry" />
         </mxCell>
         <mxCell id="Qmwp_-XaxjS77FFdiGAR-10" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Quantitative&lt;/h1&gt;&lt;div&gt;Discrète&lt;/div&gt;&lt;div&gt;Continue&lt;br&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;sketch=1;curveFitting=1;jiggle=2;labelBackgroundColor=none;fontColor=#143642;" vertex="1" parent="1">
           <mxGeometry x="420" y="140" width="150" height="80" as="geometry" />
         </mxCell>
         <mxCell id="Qmwp_-XaxjS77FFdiGAR-11" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Qualitative&lt;/h1&gt;&lt;div&gt;Ordinale&lt;br&gt;&lt;/div&gt;&lt;div&gt;Nominale&lt;br&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;sketch=1;curveFitting=1;jiggle=2;labelBackgroundColor=none;fontColor=#143642;" vertex="1" parent="1">
           <mxGeometry x="630" y="140" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Qmwp_-XaxjS77FFdiGAR-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;sketch=1;curveFitting=1;jiggle=2;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" edge="1" parent="1" source="Qmwp_-XaxjS77FFdiGAR-7" target="Qmwp_-XaxjS77FFdiGAR-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="80" as="sourcePoint" />
+            <mxPoint x="655" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Qmwp_-XaxjS77FFdiGAR-13" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;sketch=1;curveFitting=1;jiggle=2;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" edge="1" parent="1" source="Qmwp_-XaxjS77FFdiGAR-7" target="Qmwp_-XaxjS77FFdiGAR-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="245" y="80" as="sourcePoint" />
+            <mxPoint x="330" y="170" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
