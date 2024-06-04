@@ -1,6 +1,6 @@
 ---
-title: "Université de Tours M1 HBV - Correction TP statistiques univaries et bivariees"
-author: "Louis Manière"
+title: "Université de Tours M1 HBV - Statistiques univaries et bivariees"
+author: "Louis Manière - Université de Tours"
 date: "2024-03-25"
 output:
   pdf_document: default
@@ -11,9 +11,9 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Correction TP statsistiques univaries et bivariees
+# Statistiques univaries et bivariees
 
-## 1.Verifier le repertoire et afficher les donnees
+## 1.Vérifier le repertoire et afficher les donnees
 
 ```{r}
 getwd()
