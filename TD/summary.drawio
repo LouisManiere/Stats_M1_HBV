@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-04T12:21:13.951Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0" etag="yYll7pnmxuRX5JZPwGnB" version="24.4.13" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-04T12:24:46.788Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0" etag="VchQKzdjM0GUWPCxd829" version="24.4.13" type="github">
   <diagram name="Page-1" id="S4iGcN87YycN1-mO8-58">
     <mxGraphModel dx="1434" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -45,6 +45,15 @@
             <mxPoint x="245" y="80" as="sourcePoint" />
             <mxPoint x="330" y="170" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="Qmwp_-XaxjS77FFdiGAR-23" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="60" y="290" width="120" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Qmwp_-XaxjS77FFdiGAR-21" value="Population" style="shape=ext;double=1;rounded=0;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;strokeColor=#666666;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontColor=#333333;fillColor=#f5f5f5;fontStyle=1;fontSize=16;" vertex="1" parent="Qmwp_-XaxjS77FFdiGAR-23">
+          <mxGeometry width="120" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Qmwp_-XaxjS77FFdiGAR-20" value="Echantillon" style="ellipse;shape=doubleEllipse;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;strokeColor=#b85450;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fillColor=#f8cecc;fontStyle=1;fontSize=16;" vertex="1" parent="Qmwp_-XaxjS77FFdiGAR-23">
+          <mxGeometry x="10" y="20" width="100" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
