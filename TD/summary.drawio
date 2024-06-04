@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-04T14:05:39.783Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0" etag="XMwtWXqZOgbBgV7i_H17" version="24.4.13" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-04T15:18:57.980Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/115.0" etag="yyFjwXL0_6eUjVFJ4NwZ" version="24.4.13" type="github">
   <diagram name="Page-1" id="S4iGcN87YycN1-mO8-58">
     <mxGraphModel dx="1509" dy="785" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -205,9 +205,6 @@
           <mxGeometry x="398" width="132" height="62" as="geometry">
             <mxRectangle width="132" height="62" as="alternateBounds" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="Qmwp_-XaxjS77FFdiGAR-77" value="" style="shape=actor;whiteSpace=wrap;html=1;sketch=1;hachureGap=4;jiggle=2;curveFitting=1;strokeColor=#0F8B8D;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;fontColor=#143642;fillColor=#FAE5C7;" vertex="1" parent="1">
-          <mxGeometry x="560" y="480" width="40" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
