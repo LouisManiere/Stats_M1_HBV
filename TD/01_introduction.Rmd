@@ -1,0 +1,46 @@
+---
+title: "Introduction"
+author: "Louis Manière"
+date: "2024-06-04"
+output: 
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Définition des statistiques
+
+L'ensemble des méthodes qui ont pour objet la collecte, le traitement et l'interprétation de données d'observation relatives à un groupe d'individus ou d'unités
+
+## Statistique descriptive
+
+Traitement des données
+- Décrire de manière synthétique les tendances susceptibles d’exister
+- Résumer ou représenter, par des graphiques, les données disponibles
+- Caractériser les relations entre les variables Univariées Bivariées ou Multivariées
+
+## Statistique inférentielle
+
+(Inférence statistique) = L’interprétation des données
+- Tirer des conclusions voire prédire
+- Valider des hypothèses émises sur des populations à partir d’échantillons et de lois de probabilités : Tests statistiques, lois de probabilité,…
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

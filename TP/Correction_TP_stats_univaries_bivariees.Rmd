@@ -1,0 +1,213 @@
+---
+title: "Université de Tours M1 HBV - Correction TP statistiques univaries et bivariees"
+author: "Louis Manière"
+date: "2024-03-25"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Correction TP statsistiques univaries et bivariees
+
+## 1.Verifier le repertoire et afficher les donnees
+
+```{r}
+getwd()
+eau<-read.table("data/Eau.txt", sep="\t",dec=".",header=TRUE)
+eau
+```
+
+## 2.Nombre de variables, leurs natures et les dimensions du jeu de donnees
+
+```{r}
+names(eau) #noms des variables
+class(eau) #nature du tableau, dans ce cas c'est un data.frame ou jeu de donnees
+dim(eau)   #dimension du jeu de donnees
+str(eau)   #nature des variables
+```
+
+## 3.Calcul de la moyenne, la mediane et l'ecart-type des 4 variables
+
+```{r}
+summary(eau)
+```
+
+## 4.Creation des 3 objets "a","b" et "c"
+
+```{r}
+a<-subset(eau,eau$Eau=="A")
+b<-subset(eau,eau$Eau=="B")
+c<-subset(eau,eau$Eau=="C")
+#ou
+a<-eau[eau$Eau== "A",]
+b<-eau[eau$Eau== "B",]
+c<-eau[eau$Eau== "C",]
+
+#Calcul de la moyenne, la mediane et l'ecart-type de la variable "calcium"
+summary(a$Calcium)
+summary(b$Calcium)
+summary(c$Calcium)
+```
+
+##5.Tracer la boite a moustache de la teneur en Ca en fonction des types d'eau
+
+```{r}
+boxplot(eau$Calcium~eau$Eau,
+        main="Teneur en calcium en fonction des eaux",
+        xlab="Type d'eau",
+        ylab="[calcium]")
+#Faire apparaitre les moyennes
+points(1, mean(a$Calcium, na.rm = T), pch=16, col="red")
+points(2, mean(b$Calcium, na.rm = T), pch=16, col="red")
+points(3, mean(c$Calcium, na.rm = T), pch=16, col="red")
+```
+
+## 6.Faire apparaitre sur le meme graphique les boites a moustache des 4 variables en fonction des types d'eau
+
+```{r}
+par(mfrow=c(2,2)) #Faire apparaitre 4 graphiques en 2 lignes et 2 colonnes
+#Calcium
+boxplot(eau$Calcium~eau$Eau,
+        main="Teneur en calcium des eaux",
+        xlab="Type d'eaux",
+        ylab="Calcium",
+        ylim=c(0,8))
+points(1,mean(a$Calcium,na.rm=T),pch=16,col="red")
+points(2,mean(b$Calcium,na.rm=T),pch=16,col="red")
+points(3,mean(c$Calcium,na.rm=T),pch=16,col="red")
+#Magnesium
+boxplot(eau$Magnesium~eau$Eau,
+        main="Teneur en Mg des eaux",
+        xlab="Type d'eaux",
+        ylab="Magnesium",
+        ylim=c(0,8))
+points(1,mean(a$Magnesium,na.rm=T),pch=16,col="red")
+points(2,mean(b$Magnesium,na.rm=T),pch=16,col="red")
+points(3,mean(c$Magnesium,na.rm=T),pch=16,col="red")
+#Sodium
+boxplot(eau$Sodium~eau$Eau,
+        main="Teneur en Na des eaux",
+        xlab="Type d'eaux",
+        ylab="Sodium",
+        ylim=c(0,8))
+points(1,mean(a$Sodium,na.rm=T),pch=16,col="red")
+points(2,mean(b$Sodium,na.rm=T),pch=16,col="red")
+points(3,mean(c$Sodium,na.rm=T),pch=16,col="red")
+#Chlorure
+boxplot(eau$Chlorure~eau$Eau,
+        main="Teneur en Cl des eaux",
+        xlab="Type d'eaux",
+        ylab="Chlorure",
+        ylim=c(0,8))
+points(1,mean(a$Chlorure,na.rm=T),pch=16,col="red")
+points(2,mean(b$Chlorure,na.rm=T),pch=16,col="red")
+points(3,mean(c$Chlorure,na.rm=T),pch=16,col="red")
+```
+
+## 7.Discrétisation d'une variable quantitative continue
+
+```{r}
+k <- ceiling(1 + log2(length(a$Magnesium)))
+# ou
+strurges <- nclass.Sturges(a$Magnesium)
+```
+
+```{r}
+# La fonction hist prend par défaut une discrétisation par les règles de Sturges
+hist(a$Magnesium)
+```
+
+Discrétisation selon la règle de Sturges
+
+Avec le jeu de données a
+```{r}
+# Calculer le nombre de classes en utilisant la règle de Sturges
+n <- length(a$Magnesium)
+k <- ceiling(1 + log2(n))
+
+# Discrétisation de la variable continue en k classes en utilisant la fonction cut()
+class_sturges <- cut(a$Magnesium, breaks = k, include.lowest = TRUE)
+
+# Afficher les niveaux des classes
+levels(class_sturges)
+
+# Charger la bibliothèque dplyr
+library(dplyr)
+
+# Supposons que 'dataframe' est votre jeu de données et 'classes_sturges' contient les classes discrètes calculées
+
+# Ajouter une nouvelle colonne avec les classes discrètes
+a_class <- mutate(a, class = class_sturges)
+
+# Afficher les premières lignes du jeu de données pour vérification
+head(a_class)
+```
+Avec le jeu de données b
+```{r}
+# Calculer le nombre de classes en utilisant la règle de Sturges
+n <- length(b$Magnesium)
+k <- ceiling(1 + log2(n))
+
+# Discrétisation de la variable continue en k classes en utilisant la fonction cut()
+class_sturges <- cut(b$Magnesium, breaks = k, include.lowest = TRUE)
+
+# Afficher les niveaux des classes
+levels(class_sturges)
+
+# Charger la bibliothèque dplyr
+library(dplyr)
+
+# Supposons que 'dataframe' est votre jeu de données et 'classes_sturges' contient les classes discrètes calculées
+
+# Ajouter une nouvelle colonne avec les classes discrètes
+b_class <- mutate(b, class = class_sturges)
+
+# Afficher les premières lignes du jeu de données pour vérification
+head(b_class)
+```
+Table de contingence
+```{r}
+# création de la table de contingence (fréquence jointe ou proportion du couple)
+contingence <- table(a_class$class, b_class$class)
+# ajout des distribution marginales (sommes en ligne et colonne)
+contingence <- addmargins(contingence)
+contingence
+# Analyse de la distribution conditionnelle (comportement d'une variable par rapport à une classe de d'une autre variable, soit la lecture des distributions marginales par ligne et par colonne)
+```
+Table de contingence en pourcentage
+```{r}
+contingence_pc <- table(a_class$class, b_class$class)
+# création de la table de contingence (fréquence jointe ou proportion du couple)
+contingence_pc <- prop.table(contingence_pc)
+# ajout des distribution marginales (sommes en ligne et colonne)
+contingence_pc <- addmargins(contingence_pc)
+contingence_pc
+```
+
+## 8.Représentation 2 variables quantitatives
+
+```{r}
+plot(a$Calcium, a$Magnesium)
+```
+
+Matrice de corrélation
+```{r}
+cor(a[,c(1,2,3,4)])
+```
+
+Nuage de point des variables quantitatives
+```{r}
+pairs(a[,c(1,2,3,4)], pch = 19, col = "blue")
+```
+
+Correlation plot
+```{r}
+corrplot::corrplot(cor(a[,c(1,2,3,4)]), method = "circle", type = "full")
+```
+
+
+

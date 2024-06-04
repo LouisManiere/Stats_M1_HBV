@@ -1,0 +1,17 @@
+---
+title: "Statistiques univariées"
+author: "Louis Manière"
+date: "2024-06-04"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Types de variables
+
+## Variables qualitatives nominales
+
